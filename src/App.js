@@ -6,10 +6,15 @@ import Footer from './Components/Footer';
 import AccordionPrev from './Components/Accordion';
 import LeadBlock from './Components/LeadBlock';
 import MainVideos from './Components/mainVideos';
+import {api} from './utils/api'
 
 
 
 function App() {
+
+  const posts = api.dowloadPosts()
+  console.log(posts)
+
   return (
     <div>
       <Header />

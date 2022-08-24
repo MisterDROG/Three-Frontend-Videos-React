@@ -6,6 +6,7 @@ import rLogo from '../images/React.png'
 import npmLogo from '../images/npm-logo.png'
 import logo from '../images/favicon.svg'
 
+//creating footer
 export default function Footer(props) {
 
 

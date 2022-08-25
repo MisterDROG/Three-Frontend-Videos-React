@@ -3,8 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import bsLogo from '../images/Bootstrap_logo.png'
 import rLogo from '../images/React.png'
-import npmLogo from '../images/npm-logo.png'
 import logo from '../images/favicon.svg'
+import reactRouter from '../images/react-router.png'
+import reactBootstrap from '../images/react-bootstrap.png'
 
 //creating footer
 export default function Footer(props) {
@@ -23,16 +24,16 @@ export default function Footer(props) {
                 <Col md={3} className="">
                     <p className="my-2">Developed with:</p>
                     <div className="d-flex align-items-center my-2">
-                        <img className="me-2" src={bsLogo} width = "20" alt='logo'/>
-                        <p className="my-0">Bootstrap</p>
-                    </div>
-                    <div className="d-flex align-items-center my-2">
                         <img className="me-2" src={rLogo} width = "20" alt='logo'/>
                         <p className="my-0">React</p>
                     </div>
                     <div className="d-flex align-items-center my-2">
-                        <img className="me-2" src={npmLogo} width = "20" alt='logo'/>
-                        <p className="my-0">NPM</p>
+                        <img className="me-2" src={reactBootstrap} width = "20" alt='logo'/>
+                        <p className="my-0">React-Bootstrap</p>
+                    </div>
+                    <div className="d-flex align-items-center my-2">
+                        <img className="me-2" src={reactRouter} width = "20" alt='logo'/>
+                        <p className="my-0">React-Router</p>
                     </div>
                 </Col>
                 <Col md={3} className="">

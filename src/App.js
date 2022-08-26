@@ -1,3 +1,4 @@
+import { CurrentThemeContext } from './contexts/ThemeContext';
 import React from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,8 +19,22 @@ function App() {
 
   const [mainVideos, setmainVideos] = React.useState([]);
   const [accordionVideos, setAccordionVideos] = React.useState([])
-  // const { path, url } = useRouteMatch();
+  const [theme, setcolorTheme] = React.useState(true)
+  const [themeStyle, setthemeStyle] = React.useState({})
+  const theme1 ='hipopipo'
 
+  function handleThemeChange(e) {
+    setcolorTheme(!theme)
+  }
+
+
+  React.useEffect(()=>{
+    if (theme) {
+      setthemeStyle({backgroundColor: "white", color: "black"})
+    } else {
+      setthemeStyle({backgroundColor: "#383D42", color: "white"})
+    }
+  }, [theme])
 
   React.useEffect(() => {
     api
@@ -36,27 +51,30 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Header url={'url'}/>
-      {/* <p>{JSON.stringify(url)}</p> */}
-      <BrowserRouter>
-      <Switch>
-          <Route exact path='/'>
-            <LeadBlock />
-            <MainVideos posts={mainVideos}/>
-            <AccordionPrev posts={accordionVideos}/>
-          </Route>
-          <Route path='/help'>
-            <Help />
-          </Route>
-          <Route path="*">
-            <PageNotFound />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-      <Footer />
-    </div>
+    <CurrentThemeContext.Provider value={theme}>
+      <div className={'body'} style={themeStyle}>
+        <Header onChange={handleThemeChange}/>
+        <BrowserRouter>
+        <Switch>
+            <Route exact path='/'>
+              <LeadBlock />
+              <MainVideos posts={mainVideos}/>
+              <AccordionPrev posts={accordionVideos}/>
+            </Route>
+            <Route path='/help'>
+              <Help />
+            </Route>
+            <Route path="*">
+              <PageNotFound />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+        <Footer />
+      </div>
+    </CurrentThemeContext.Provider>
   );
 }
 
 export default App;
+
+

@@ -1,13 +1,26 @@
+import { CurrentThemeContext } from '../contexts/ThemeContext';
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../images/favicon.svg'
-import { BrowserRouter, Route, Switch, Link} from 'react-router-dom';
+
 
 //creating header
 export default function Header(props) {
     
+    const theme = React.useContext(CurrentThemeContext);
+
+    const [themeStyle, setthemeStyle] = React.useState({})
+  
+    React.useEffect(()=>{
+      if (theme) {
+        setthemeStyle({ backgroundColor: "#212529", borderRadius: "15px"})
+      } else {
+        setthemeStyle({backgroundColor: "#01CBFD", color: "black", borderRadius: "15px"})
+      }
+    }, [theme])
+
     return (
         <Navbar variant="dark" bg="dark" expand="md">
             <Container fluid className="mx-0">
@@ -22,9 +35,9 @@ export default function Header(props) {
                 </div>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav activeKey="/help" className="ms-auto text-center">
-                        <Nav.Link href="#home">About</Nav.Link>
-                        <Nav.Link href="#link">Videos</Nav.Link>
+                    <Nav className="ms-auto text-center">
+                        <Nav.Link href="#home">Randomize!</Nav.Link>
+                        <Nav.Link onClick={props.onChange} style={themeStyle}>Night-mode</Nav.Link>
                         <Nav.Link href="/help" eventKey="help">Help</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

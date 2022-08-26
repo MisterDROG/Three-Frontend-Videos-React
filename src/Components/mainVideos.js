@@ -10,7 +10,7 @@ export default function MainVideos(props) {
 
     return (
         <Container className='text-center'>
-            <h4 className="fw-bold mt-5 mb-3">Today (26.08.22) videos:</h4>
+            {/* <h4 className="fw-bold mt-5 mb-3">Today's ({props.posts[0].date}) videos:</h4> */}
             <Row>
                 {props.posts.map((object) => (
                     <Col md={4} className="mt-4 d-md-flex" key={object.id}>

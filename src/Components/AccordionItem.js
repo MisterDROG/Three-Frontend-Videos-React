@@ -29,9 +29,9 @@ export default function AccordionItem(props) {
                 <Accordion.Body>
                     <Row>
                         {props.posts.map((object) => (
-                            <Col md={4} className="mt-4 d-md-flex" key={object.id}>
+                            <Col md={4} className="mt-4 d-md-flex" key={object._id}>
                                 <CardVideo
-                                    id={object.id}
+                                    id={object._id}
                                     title={object.title}
                                     embedLink={object.embedLink}
                                     youTubeLink={object.youTubeLink}

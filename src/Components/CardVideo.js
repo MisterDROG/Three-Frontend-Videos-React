@@ -28,7 +28,8 @@ export default function CardVideo(props) {
                 allowFullScreen
             ></iframe>
             <Card.Body className="d-flex flex-column">
-                <Card.Title>Video#{props.id}</Card.Title>
+                <Card.Title>Video:</Card.Title>
+                {/* #{props.id} */}
                 <Card.Text>{props.title}</Card.Text>
                 <a href={props.youTubeLink} className="btn btn-primary mt-auto">
                     Go YouTube

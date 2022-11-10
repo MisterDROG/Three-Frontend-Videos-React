@@ -14,9 +14,9 @@ export default function MainVideos(props) {
             <h4 className="fw-bold mt-5 mb-3">Today's videos:</h4>
             <Row>
                 {props.posts.map((object) => (
-                    <Col md={4} className="mt-4 d-md-flex" key={object.id}>
+                    <Col md={4} className="mt-4 d-md-flex" key={object._id}>
                         <CardVideo
-                            id={object.id}
+                            id={object._id}
                             title={object.title}
                             embedLink={object.embedLink}
                             youTubeLink={object.youTubeLink}

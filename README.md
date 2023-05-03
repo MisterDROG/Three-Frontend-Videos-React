@@ -1,19 +1,19 @@
 Front-end part of "Three Frontend Video" project.
 
-Project aimed at young developers. Three Frontend videos are uploaded to the site from Back-end every day so that junior developers have the opportunity to watch something on the road, at lunch and just in their free time.
+Project aimed at young developers. Three frontend videos are uploaded to the site from Back-end every day so that junior developers have the opportunity to watch something on the road, at lunch and just in their free time.
 
 The site implements support for night mode, the function of randomizing all content in the case when video views are over, but you need more, a page with instructions is also implemented.
 
 Technology used in this project:
 
 -   React
--   React-routing for pages navigation
+-   React-router for pages navigation
 -   Bootstrap
 -   React-Bootstrap for design
 
 Special attention was paid to the project structure (file structure, variable and function names, code modularity, comments in the code), so that later it would be easier to continue developing the project in a team with other developers.
 
-The project is a continuation of my previous project (https://github.com/MisterDROG/Three-Frontend-Videos), which was made only on Bootstrap. This version is fully ported to React and will continue to develop on it.
+The project is a continuation of my previous project (https://github.com/MisterDROG/Three-Frontend-Videos), which was made only on Bootstrap. This version is fully ported to React and will continue to develop it.
 
 Prospects for the development of the project have three steps:
 

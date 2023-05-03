@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import rLogo from '../images/React.png';
 import questionMan from '../images/questionMan.png';
 import reactBootstrap from '../images/react-bootstrap.png';
 import reactRouter from '../images/react-router.png';
-import rLogo from '../images/React.png';
 
 export default function Help(props) {
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function Help(props) {
                         </li>
                         <li>Click again to return to the standard version.</li>
                         <li>When you repeat the randomize, new videos will drop out.</li>
-                        <li>We also have a dark theme and support for mobile devices.</li>
+                        <li>We also have a dark theme and support of mobile devices.</li>
                     </ul>
                 </Col>
             </Row>
@@ -57,7 +57,7 @@ export default function Help(props) {
             </p>
             <h4 className="fw-bold mt-5 mb-3">Contacts</h4>
             <p>For your questions, suggestions, coloboration, please, contact:</p>
-            <p className="fw-bold">example@email.com</p>
+            <p className="fw-bold">tf_videos_daily@gmail.com</p>
         </Container>
     );
 }

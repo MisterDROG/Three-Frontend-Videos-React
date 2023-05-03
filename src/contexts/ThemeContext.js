@@ -1,3 +1,3 @@
 import React from "react";
 
-export const CurrentThemeContext = React.createContext()
+export const CurrentThemeContext = React.createContext(false)

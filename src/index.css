@@ -1,3 +1,8 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +12,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.body {
+  /* Margin bottom by footer height */
+  padding-bottom: 232px;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 184px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .body {
+    padding-bottom: 418px;
+  }
+
+  #footer {
+    height: 370px;
+  }
+
 }

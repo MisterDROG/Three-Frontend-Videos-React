@@ -1,6 +1,7 @@
+import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import AccordionItem from './AccordionItem';
 import Container from 'react-bootstrap/esm/Container';
+import AccordionItem from './AccordionItem';
 
 //creating container for accodions of previos days
 export default function AccordionPrev(props) {

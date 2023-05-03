@@ -1,18 +1,18 @@
+import React from 'react';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import bsLogo from '../images/Bootstrap_logo.png'
-import rLogo from '../images/React.png'
-import logo from '../images/favicon.svg'
-import reactRouter from '../images/react-router.png'
-import reactBootstrap from '../images/react-bootstrap.png'
+import rLogo from '../images/React.png';
+import logo from '../images/favicon.svg';
+import reactBootstrap from '../images/react-bootstrap.png';
+import reactRouter from '../images/react-router.png';
 
 //creating footer
-export default function Footer(props) {
+export default function Footer() {
 
 
     return (
-        <Container fluid className=" bg-dark text-white mt-5 mx-0 px-5 py-4">
+        <Container fluid id ='footer' className="bg-dark text-white mt-5 mx-0 px-5 py-4">
             <Row>
                 <Col md={3} className="d-flex align-items-center">
                     <img className="me-2" src={logo} width = "50" alt='logo'/>
@@ -38,7 +38,7 @@ export default function Footer(props) {
                 </Col>
                 <Col md={3} className="">
                     <p className="my-2">For feedback:</p>
-                    <p className="my-2">example@email.com</p>
+                    <p className="my-2">tf_videos_daily@gmail.com</p>
                     <p className="my-2">Developer:</p>
                     <p className="my-2">©MR.Drog 2022</p>
                 </Col>

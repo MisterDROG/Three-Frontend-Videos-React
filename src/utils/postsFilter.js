@@ -1,5 +1,5 @@
 class PostsFilter {
-    // filtering posts from all posts in DB to posts for main posts
+    // filtering posts from all posts in DB to posts for today videos
     filterMainVideos(posts) {
         let postsMain = [];
         for (let i = posts.length - 1; i > posts.length - 4; i = i - 1) {
@@ -8,7 +8,7 @@ class PostsFilter {
         return postsMain;
     }
 
-    // filtering posts from all posts in DB to posts for main posts
+    // choose random posts from all posts in DB to posts for main posts instead today videos
     randomMainVideos(posts) {
         let postsMain = [];
         let usedIndex = [];
@@ -21,7 +21,6 @@ class PostsFilter {
             usedIndex.push(index);
             postsMain.unshift(posts[index]);
         }
-        console.log('посты3', postsMain);
         return postsMain;
     }
 

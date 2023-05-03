@@ -14,7 +14,6 @@ import { api } from './utils/api';
 import { postsFilter } from './utils/postsFilter';
 
 function App() {
-    const [allPosts, setAllPosts] = React.useState([]);
     const [mainVideos, setmainVideos] = React.useState([]);
     const [accordionVideos, setAccordionVideos] = React.useState([]);
     const [randomPosts, setRandomPosts] = React.useState([]);
@@ -47,13 +46,10 @@ function App() {
         api.dowloadPosts()
             .then((res) => {
                 console.log(res);
-                setAllPosts(res.slice());
                 setAccordionVideos(postsFilter.filterAccordionVideos(res).slice());
                 if (randomPostsSet) {
-                    console.log('все', randomPosts);
                     setRandomPosts(postsFilter.randomMainVideos(res).slice());
                 } else {
-                    console.log('главные', mainVideos);
                     setmainVideos(postsFilter.filterMainVideos(res).slice());
                 }
             })
@@ -61,8 +57,6 @@ function App() {
                 console.log(err);
             });
     }, [randomPostsSet]);
-
-    // randomPosts, allPosts
 
     return (
         <BrowserRouter>

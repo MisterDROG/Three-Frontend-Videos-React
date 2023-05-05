@@ -55,7 +55,7 @@ export default function Header(props) {
                         {props.helpState ? (
                             <Link
                                 className="nav-link ms-2 my-1"
-                                to="/"
+                                to="/Three-Frontend-Videos-React/"
                                 style={{ backgroundColor: '#01CBFD', color: 'black', borderRadius: '15px' }}
                             >
                                 Help
@@ -63,7 +63,7 @@ export default function Header(props) {
                         ) : (
                             <Link
                                 className="nav-link ms-2 my-1"
-                                to="/help"
+                                to="/Three-Frontend-Videos-React/help"
                                 style={{ backgroundColor: '#212529', borderRadius: '15px' }}
                             >
                                 Help

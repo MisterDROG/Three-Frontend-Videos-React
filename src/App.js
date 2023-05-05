@@ -69,12 +69,12 @@ function App() {
                         onRandom={handleRandom}
                     />
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/Three-Frontend-Videos-React/">
                             <LeadBlock onChange={handleHelpPage} />
                             <MainVideos posts={randomPostsSet ? randomPosts : mainVideos} />
                             <AccordionPrev posts={accordionVideos} />
                         </Route>
-                        <Route path="/help">
+                        <Route path="/Three-Frontend-Videos-React/help">
                             <Help onChange={handleHelpPage} />
                         </Route>
                         <Route path="*">

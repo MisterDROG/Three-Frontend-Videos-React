@@ -26,6 +26,6 @@ class Api {
 }
 
 export const api = new Api({
-    // url: 'https://tfvideos-8e550-default-rtdb.firebaseio.com/posts.json',
-    url: 'http://localhost:4000/',
+    url: 'https://tfvideos-8e550-default-rtdb.firebaseio.com/posts.json',
+    // url: 'http://localhost:4000/',
 });

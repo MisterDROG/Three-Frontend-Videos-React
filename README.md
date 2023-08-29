@@ -10,6 +10,7 @@ Technology used in this project:
 -   React-router for pages navigation
 -   Bootstrap
 -   React-Bootstrap for design
+-   Jest for testing
 
 Special attention was paid to the project structure (file structure, variable and function names, code modularity, comments in the code), so that later it would be easier to continue developing the project in a team with other developers.
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Container from 'react-bootstrap/esm/Container';
+import Container from 'react-bootstrap/Container';
 
 //creating main title of the main page
 export default function LeadBlock(props) {

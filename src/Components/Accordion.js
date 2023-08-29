@@ -1,6 +1,6 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Container from 'react-bootstrap/esm/Container';
+import Container from 'react-bootstrap/Container';
 import AccordionItem from './AccordionItem';
 
 //creating container for accodions of previos days
